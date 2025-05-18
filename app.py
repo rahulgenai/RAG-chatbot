@@ -8,7 +8,7 @@ from sentence_transformers import SentenceTransformer
 from openai import OpenAI
 
 # Initialize OpenAI Client
-client = OpenAI(api_key=st.secrets["OPENAI_API_KEY"])
+client = genai.Client(api_key=userdata.get('GOOGLE_API_KEY'))
 
 # Load embedding model
 embed_model = SentenceTransformer("all-MiniLM-L6-v2")
